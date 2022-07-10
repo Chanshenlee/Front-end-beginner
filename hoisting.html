@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+        <!-- 告訴瀏覽器，網頁編碼是 utf-8 -->
+        <meta charset="utf-8"  />
+        <title>JavaScript Hoisting宣告提升</title>
+    </head>
+    <!-- 網頁的主畫面，都寫在 body 標籤中-->
+    <body>
+        <script>
+           x=10;//給定初始資料
+           alert(x);//使用變數
+           var x;//宣告變數
+           //雖然正常來說是要先宣告變數->給定資料->使用變數，但Javascript有宣告提升的特性，會將宣告變數拉到最前面。
+           //var x=10; 只會把var x提到前面，x=10會留在原地
+
+           test();//呼叫函式
+           function test(){ //函式宣告
+            alert("Hello");
+           }
+           //在函式裡的情況也一樣，有Hoisting的效果
+
+           
+        //    test();
+        //    var test=function(){
+        //     alert("Hello");
+        //    }
+        //另一種的函式寫法只會把var test這個變數宣告拉到最前面
+        </script>
+    </body>
+</html>

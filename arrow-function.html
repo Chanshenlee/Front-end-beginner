@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+        <!-- 告訴瀏覽器，網頁編碼是 utf-8 -->
+        <meta charset="utf-8"  />
+        <title>JavaScript 箭頭函式</title>
+    </head>
+    <!-- 網頁的主畫面，都寫在 body 標籤中-->
+    <body>
+        <script>
+            //箭頭函式建立 calculate
+            let calculate=(max)=>{
+                let result=0;
+                let n=1;
+                while(n<=max){
+                    result+=n;
+                    n++;
+                }
+                return result;
+            };
+            //呼叫函式
+            let ans1=calculate(10);
+            let ans2=calculate(20);
+            console.log(ans1,ans2);
+            //乘法的箭頭函式
+            let multiply=(n1,n2)=>(n1*n2);
+            let ans=multiply(3,4);
+            console.log(ans);
+                
+            
+
+            
+        </script>
+    </body>
+</html>
